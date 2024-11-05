@@ -201,11 +201,11 @@ form>div>div {
 }
 
 form>div>div:nth-child(odd) {
-  flex: 1 1 40%;
+  flex: 1 1 45%;
 }
 
 form>div>div:nth-child(even) {
-  flex: 1 1 60%;
+  flex: 1 1 55%;
 }
 
 .inputs {
