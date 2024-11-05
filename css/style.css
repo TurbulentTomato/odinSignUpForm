@@ -244,3 +244,7 @@ button {
   font-weight: normal;
   margin-bottom: 5px;
 }
+
+.confirm-password .example::first-line {
+  max-width: 9ch;
+}
