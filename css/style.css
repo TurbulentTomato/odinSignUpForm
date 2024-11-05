@@ -167,7 +167,6 @@ input:invalid+span::before {
 }
 
 .text {
-  width: clamp(40ch, 100%, 65ch);
   font-size: 2rem;
   font-weight: bold;
 }
