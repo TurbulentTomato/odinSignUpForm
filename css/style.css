@@ -16,6 +16,7 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -73,8 +74,8 @@ h6 {
 */
 
 body {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
 }
 
@@ -90,10 +91,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: green;
-}
-
-.block-right {
-  flex: 2 2 66%;
 }
 
 .logo-container {
@@ -127,8 +124,123 @@ img {
   bottom: 50px;
   color: #fff;
   align-self: center;
+}
 
-  a {
-    color: #fff;
-  }
+
+.block-left>p>a {
+  color: #fff;
+}
+
+
+.block-right {
+  flex: 2 2 66%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafb;
+  justify-content: center;
+  gap: min(2vh, 200px);
+}
+
+input {
+  display: block;
+  border: 2px solid #E5E7EB;
+  border-radius: 0.2em;
+}
+
+input:user-invalid {
+  border: 2px solid red;
+}
+
+input:focus {
+  border: 2px solid blue;
+  outline: none;
+  box-shadow: 0px 0px 4px 4px #E5E7EB;
+}
+
+input:invalid+span::before {
+  content: "this field is required";
+  background-color: red;
+  color: white;
+  position: relative;
+  top: -25px;
+  left: 45px;
+}
+
+.text {
+  width: clamp(40ch, 100%, 65ch);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.text>span {
+  display: inline-block;
+  margin: calc(1em) 0px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0px 2px 20px #999999;
+  margin-top: 2.5vh;
+}
+
+h2 {
+  margin: 20px 0px;
+  font-size: 2rem;
+}
+
+label {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+form>div>div {
+  margin-bottom: 15px;
+}
+
+form>div>div:nth-child(odd) {
+  flex: 1 1 40%;
+}
+
+form>div>div:nth-child(even) {
+  flex: 1 1 60%;
+}
+
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.right {
+  padding-left: 5%;
+}
+
+button {
+  color: #fff;
+  border: none;
+  border-radius: 0.2em;
+  background-color: #596D48;
+  padding: 0.5rem 1rem;
+  margin: 25px 0px;
+}
+
+.sign-up {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.login>a {
+  text-decoration: none;
+  color: #596D48;
+}
+
+.example {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 5px;
 }
