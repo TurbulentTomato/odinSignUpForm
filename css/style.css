@@ -167,6 +167,7 @@ input:invalid+span::before {
 }
 
 .text {
+  max-width: 65ch;
   font-size: 2rem;
   font-weight: bold;
 }
